@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Basic Form</title>
+  <meta name="description" content="A basic form">
+
+  <!-- Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="main.css">
+  <link href='http://fonts.googleapis.com/css?family=Courgette|Roboto:400,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <h1>Udacity
+          <span>Down Under</span>
+        </h1>
+        <nav>
+          <a href="#">항공</a>
+          <a href="#">호텔</a>카
+          <a href="#">렌터카</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="card">
+        <form>
+          <div class="trip-selector">
+            <label>
+              <input type="radio" checked name="tType" value="0"> 편도
+            </label>
+            <label>
+              <input type="radio" name="tType" value="1"> 왕복
+            </label>
+            <label>
+              <input type="radio" name="tType" value="2"> 다구간
+            </label>
+          </div>
+
+          <div class="container">
+            <h2>어디로 가시나요?</h2>
+            <div class="row">
+              <label for="fName">이름</label>
+              <input type="text" name="fName" id="fName">
+            </div>
+
+            <div class="row">
+              <label for="address">주소</label>
+              <textarea id="address" name="addressTxt"></textarea>
+            </div>
+
+            <div class="row">
+              <div class="inline-control col-1">
+                <label for="depCity">출발</label>
+                <input type="text" list="depCities" name="depCity" id="depCity">
+                <datalist id="depCities">
+                  <option value="인천">
+                  <option value="김포">
+                  <option value="제주">
+                  <option value="김해">
+                  <option value="청주">
+                </datalist>
+              </div>
+
+              <div class="inline-control col-1">
+                <label for="arrCity">도착</label>
+                <input type="text" list="arrCities" name="arrCity" id="arrCity">
+                <datalist id="arrCities">
+                  <option value="인천">
+                  <option value="김포">
+                  <option value="제주">
+                  <option value="김해">
+                  <option value="청주">
+                </datalist>
+              </div>
+
+              <div class="inline-control col-1">
+                <label for="dDate">출발 날짜</label>
+                <input type="date" name="dDate" id="dDate">
+              </div>
+
+              <div class="inline-control col-1">
+                <label for="rDate">도착 날짜</label>
+                <input type="date" name="rDate" id="rDate">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="inline-control col-2">
+                <label for="seatType">희망 좌석</label>
+                <select name="seatType" id="seatType">
+                  <option value="0">상관없음</option>
+                  <option value="1">복도쪽</option>
+                  <option value="2">창문쪽</option>
+                </select>
+              </div>
+
+              <div class="inline-control sign-up col-1">
+                <label>
+                  <input type="checkbox" checked name="jLetter"> 프로모션 오퍼 포함
+                </label>
+              </div>
+
+              <div class="inline-control submit-form col-1">
+                <button type="submit" id="submitBtn">검색</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+  </div>
+  <div class="click-stealer"></div>
+
+  <script>
+    document.querySelector('.click-stealer').addEventListener('click', function(e) {
+      e.stopPropagation();
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      return false;
+    });
+  </script>
+</body>
+
+</html>
