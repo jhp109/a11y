@@ -760,6 +760,9 @@ i.gray-star {
     padding: 5em 0 2em;
     background: #2b2a2a;
 }
+.w3_footer_grids {
+		display: none;
+}
 .w3_footer_grid h3 {
     color: #ffffff;
     font-size: 1.5em;
@@ -1356,6 +1359,7 @@ ul.faq {
 }
 /*-- //single --*/
 .brands {
+		display: none;
     padding: 5em 0;
     background: #eed3b6;
 }
@@ -2584,7 +2588,7 @@ ul.phone_email li {
     padding: 3em 0 2em;
 }
 .footer {
-    padding: 3em 0 2em;
+    padding: 1em 0 2em;
 }
 .w3_footer_grid {
     float: left;
@@ -2677,9 +2681,11 @@ p.w3l-ad {
     padding: 3em 0;
 }
 .ban-bottom-w3l {
+		display: none;
     padding: 3em 0;
 }
 .brands-agile {
+	  display: none;
     margin-top: 3em;
 }
 .grid_3.grid_5 {
@@ -2855,6 +2861,9 @@ ul.faq {
 .w3l_offers {
     width: 100%;
     text-align: center;
+}
+.w3l_offers,.w3l_search,.categories,.products-right-grids,.footer-botm,.agile-login {
+		display: none;
 }
 .agile-login {
     width: 38%;
