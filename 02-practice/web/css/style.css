@@ -176,10 +176,11 @@ button.w3l_search {
 }
 button.w3view-cart {
     background: transparent;
-    border: none;
+    /* border: none; */
 }
 button.w3view-cart:focus{
-	outline:none;
+	/*outline:none;*/
+	outline-color: blue;
 }
 .logo_products {
     padding: 2em 0;
@@ -397,7 +398,7 @@ ul.multi-column-dropdown h6 {
     width:77%;
 }
 .btn-danger.my-cart-btn:focus {
-    outline: none;
+    /*outline: none;*/
 }
 .snipcart-details input.button {
     font-size: 14px;
@@ -450,8 +451,8 @@ ul.multi-column-dropdown h6 {
 #PPMiniCart .minicart-remove {
     background: #3399cc !important;
     border: 1px solid #3399cc !important;
-	opacity: 1 !important;
-	outline:none;
+    opacity: 1 !important;
+    /* outline:none; */
 }
 #PPMiniCart .minicart-submit {
     display: none;
@@ -593,7 +594,7 @@ i.gray-star {
 	bottom: 20px;
 	right: 2%;
 	overflow: hidden;
-	z-index: 999; 
+	z-index: 999;
 	width: 32px;
 	height: 32px;
 	border: none;
@@ -1802,25 +1803,25 @@ li.callbacks1_s1.callbacks_here a.callbacks1_s1:focus{
   color: black;
   background: rgba(245, 179, 3, 0.79);
   text-decoration: none;
-  outline: none;
+  /*outline: none;*/
 }
 a.callbacks1_s4.active,a.callbacks1_s4:focus{
   color: black;
   background: rgba(245, 179, 3, 0.79);
   text-decoration: none;
-  outline: none;
+  /*outline: none;*/
 }
 a.callbacks1_s2.active,a.callbacks1_s2:focus{
   color: black;
   background: rgba(245, 179, 3, 0.79);
   text-decoration: none;
-  outline: none;
+  /*outline: none;*/
 }
 a.callbacks1_s3.active,a.callbacks1_s3:focus{
   color: black;
   background: rgba(245, 179, 3, 0.79);
   text-decoration: none;
-  outline: none;
+  /*outline: none;*/
 }
 /*--//slider end here--*/
 /*-- about-slid --*/
@@ -2031,7 +2032,7 @@ a.callbacks1_s3.active,a.callbacks1_s3:focus{
 }
 
 .input__field:focus {
-	outline: none;
+	/*outline: none;*/
 }
 
 .input__label {
@@ -2819,7 +2820,10 @@ ul.faq {
 .w3ls_logo_products_left1 {
     width: 100%;
     text-align: center;
+    font-size: 13px;
 }
+
+.w3ls_logo_products_left1 {}
 .w3ls_logo_products_left {
     width: 100%;
     margin: 20px 0;
