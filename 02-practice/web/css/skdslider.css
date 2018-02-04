@@ -325,7 +325,8 @@ text-decoration:underline;
 }
 @media (max-width: 414px){	
 	.skdslider {
-		height: 154px;
+		height: 130px;
+		/* display: none; */
 	}	
 	.skdslider .slide-desc {
 		bottom: 10%;
