@@ -434,7 +434,7 @@ ul.multi-column-dropdown h6 {
 #PPMiniCart ul {
     width: 548px !important;
 }
-#PPMiniCart .minicart-item a {
+#PPMiniCart .minicart-item span {
     color: #212121 !important;
     font-size: 1em;
     display: block;
