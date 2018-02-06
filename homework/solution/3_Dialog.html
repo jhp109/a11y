@@ -40,9 +40,11 @@
       closeButton.addEventListener('keypress', function(e) {
         if (e.keyCode == 13 || e.keyCode == 32) closeDialog();
       });
+      
       function openDialog() {
         dialog.showModal();
       }
+      
       function closeDialog() {
         dialog.close();
         settingButton.focus();
