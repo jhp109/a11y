@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>
+      .fancy-button {
+        background-color: #f6ff9b;
+        border-radius: 5px;
+        height: 20px;
+        padding: 5px;
+        text-align: center;
+        width: 60px;
+      }
+      .title-bar {
+        background-color: #dddddd;
+        height: 50px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body style="width: 500px;">
+    <div class="title-bar">
+      <span>접근성을 잘 지원합시다! </span>
+      <button id="setting">설정</button>
+    </div>
+    <dialog id="dialog">
+      <div>Hello, world!</div>
+      <div id="close" class="fancy-button">닫기</div>
+    </dialog>
+    <script>
+      let settingButton = document.getElementById('setting');
+      let closeButton = document.getElementById('close');
+      let dialog = document.getElementById('dialog');
+
+      settingButton.addEventListener('click', openDialog);
+      settingButton.addEventListener('keypress', function(e) {
+        if (e.keyCode == 13 || e.keyCode == 32) openDialog();
+      });
+      closeButton.addEventListener('click', closeDialog);
+      closeButton.addEventListener('keypress', function(e) {
+        if (e.keyCode == 13 || e.keyCode == 32) closeDialog();
+      });
+      function openDialog() {
+        dialog.showModal();
+      }
+      function closeDialog() {
+        dialog.close();
+      }
+    </script>
+  </body>
+</html>
