@@ -1,6 +1,32 @@
 <html>
   <head>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
     <style>
+      body {
+        background-color: #4285f4;
+        color: white;
+        width: 500px;
+        margin: auto;
+        font-family: 'Nanum Gothic', sans-serif;
+      }
+      .message {
+        font-size: 40px;
+        text-align: center;
+        padding: 20px 0 50px;
+      }
+      .calendar {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .table {
+	background-color: white;
+     	margin: auto;
+	width: 350px;
+	height: 200px;
+	text-align: center;
+	margin-bottom: 30px;
+      }
       .date {
         color: #2280d8;
         padding: 6px;
@@ -9,11 +35,32 @@
         color: grey;
         padding: 6px;
       }
+     .schedule {
+        text-align: center;
+        padding: 10px;
+      }
+      .close-button {
+	border: none;
+	border-radius: 5px;
+        background-color: #f6ff9b;
+	display: block;
+	font-size: 14px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	width: 60px;
+      }
     </style>
   </head>
   <body>
-    <span>2월 달력 (날짜 클릭시 스케줄 등록 가능)</span>
-    <table border="5" style="margin: 10px 0;">
+   <div class="message">
+      <div>a11y homework:</div>
+      <div>Calendar</div>
+  </div>
+    <div class="calendar">2월 달력 (날짜 틀릭시 스케줄 등록 가능)</div>
+    <table class="table" border=5>
       <tr>
         <td><span class="disabled">28</span></td>
         <td><span class="disabled">29</span></td>
@@ -60,14 +107,14 @@
         <td><span class="disabled">3</span></td>
       </tr>
     </table>
-    <span>
+    <span style="line-height: 23px">
       Tab navigation을 편리하게 하기 위해서, 달력 내부에 있는 날짜에 잡히는 focus box가 방향키로도
       이동이 가능하도록 하면 정말 좋겠죠?
     </span>
     <dialog id="dialog">
-      <div>2월 <span id="date">1</span>일 스케줄 등록</div>
+      <div class="schedule">2월 <span id="date">1</span>일 스케줄 등록</div>
       <div>제목 : <input type="text" name="title"></div>
-      <button id="close" onclick="closeDialog()">닫기</button>
+      <button class="close-button" id="close" onclick="closeDialog()">닫기</button>
     </dialog>
 
     <script>
