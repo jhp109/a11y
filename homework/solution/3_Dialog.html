@@ -34,11 +34,11 @@
 
       settingButton.addEventListener('click', openDialog);
       settingButton.addEventListener('keypress', function(e) {
-        if (e.keyCode == 13 || e.keyCode == 32) openDialog();
+        if (e.keyCode == 13) openDialog();
       });
       closeButton.addEventListener('click', closeDialog);
       closeButton.addEventListener('keypress', function(e) {
-        if (e.keyCode == 13 || e.keyCode == 32) closeDialog();
+        if (e.keyCode == 13) closeDialog();
       });
       
       function openDialog() {
