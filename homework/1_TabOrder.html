@@ -1,7 +1,21 @@
 <html>
   <head>
+   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
     <style>
+      body {
+     	background-color: #4285f4;
+        color: white;
+   	width: 500px;
+	margin: auto;
+	font-family: 'Nanum Gothic', sans-serif;
+      }
+      .message {
+	font-size: 40px;
+	text-align: center;
+	padding: 20px 0 50px;
+      }
       .dropdown>div {
+	color: black;
         font-size: 18px;
         margin-bottom: 5px;
       }
@@ -11,13 +25,18 @@
         padding: 15px 0;
       }
       .title-bar {
-        background-color: #dddddd;
+        background-color: white;
+	border-radius: 10px;
         height: 50px;
-        padding: 10px;
+        padding: 20px;
       }
     </style>
   </head>
-  <body style="width: 500px;">
+  <body>
+    <div class="message">
+      <div>a11y homework:</div>
+      <div>Tab order</div>
+    </div>
     <div class="title-bar">
       <div class="links">
         <a href="#">
@@ -38,9 +57,9 @@
       </div>
     </div>
     <a style="display: block; margin: 30px 10px;" href="#">Contact us</a>
-    <span>
+    <span style="line-height: 23px">
       현재 페이지에서 Tab 키를 눌러보면, 오른쪽의 링크들이 왼쪽에 있는 드롭다운 박스보다 먼저 focus가 됩니다.
-      어떻게 하면 Tab키의 순서를 왼쪽에서 오른쪽으로 가도록 바꿀 수 있을까요? (힌트: tabindex)
-    </span>
+      어떻게 하면 Tab키의 순서를 왼쪽에서 오른쪽으로 가도록 바꿀 수 있을까요?</span>
+   <spa>(힌트: tabindex)</span>
   </body>
 </html>
