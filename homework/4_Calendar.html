@@ -1,0 +1,163 @@
+<html>
+  <head>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <style>
+      body {
+        background-color: #4285f4;
+        color: white;
+        width: 500px;
+        margin: auto;
+        font-family: 'Nanum Gothic', sans-serif;
+      }
+      .message {
+        font-size: 40px;
+        text-align: center;
+        padding: 20px 0 50px;
+      }
+      .calendar {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .table {
+	background-color: white;
+     	margin: auto;
+	width: 350px;
+	height: 200px;
+	text-align: center;
+	margin-bottom: 30px;
+      }
+      .date {
+        color: #2280d8;
+        padding: 6px;
+      }
+      .disabled {
+        color: grey;
+        padding: 6px;
+      }
+     .schedule {
+        text-align: center;
+        padding: 10px;
+      }
+      .close-button {
+	border: none;
+	border-radius: 5px;
+        background-color: #f6ff9b;
+	display: block;
+	font-size: 14px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	width: 60px;
+      }
+    </style>
+  </head>
+  <body>
+   <div class="message">
+      <div>a11y homework:</div>
+      <div>Calendar</div>
+  </div>
+    <div class="calendar">2월 달력 (날짜 틀릭시 스케줄 등록 가능)</div>
+    <table class="table" border=5>
+      <tr>
+        <td><span class="disabled">28</span></td>
+        <td><span class="disabled">29</span></td>
+        <td><span class="disabled">30</span></td>
+        <td><span class="disabled">31</span></td>
+        <td><a class="date" href="#">1</a></td>
+        <td><a class="date" href="#">2</a></td>
+        <td><a class="date" href="#">3</a></td>
+      </tr>
+      <tr>
+        <td><a class="date" href="#">4</a></td>
+        <td><a class="date" href="#">5</a></td>
+        <td><a class="date" href="#">6</a></td>
+        <td><a class="date" href="#">7</a></td>
+        <td><a class="date" href="#">8</a></td>
+        <td><a class="date" href="#">9</a></td>
+        <td><a class="date" href="#">10</a></td>
+      </tr>
+      <tr>
+        <td><a class="date" href="#">11</a></td>
+        <td><a class="date" href="#">12</a></td>
+        <td><a class="date" href="#">13</a></td>
+        <td><a class="date" href="#">14</a></td>
+        <td><a class="date" href="#">15</a></td>
+        <td><a class="date" href="#">16</a></td>
+        <td><a class="date" href="#">17</a></td>
+      </tr>
+      <tr>
+        <td><a class="date" href="#">18</a></td>
+        <td><a class="date" href="#">19</a></td>
+        <td><a class="date" href="#">20</a></td>
+        <td><a class="date" href="#">21</a></td>
+        <td><a class="date" href="#">22</a></td>
+        <td><a class="date" href="#">23</a></td>
+        <td><a class="date" href="#">24</a></td>
+      </tr>
+      <tr>
+        <td><a class="date" href="#">25</a></td>
+        <td><a class="date" href="#">26</a></td>
+        <td><a class="date" href="#">27</a></td>
+        <td><a class="date" href="#">28</a></td>
+        <td><span class="disabled">1</span></td>
+        <td><span class="disabled">2</span></td>
+        <td><span class="disabled">3</span></td>
+      </tr>
+    </table>
+    <span style="line-height: 23px">
+      Tab navigation을 편리하게 하기 위해서, 달력 내부에 있는 날짜에 잡히는 focus box가 방향키로도
+      이동이 가능하도록 하면 정말 좋겠죠?
+    </span>
+    <dialog id="dialog">
+      <div class="schedule">2월 <span id="date">1</span>일 스케줄 등록</div>
+      <div>제목 : <input type="text" name="title"></div>
+      <button class="close-button" id="close" onclick="closeDialog()">닫기</button>
+    </dialog>
+
+    <script>
+      let dialog = document.getElementById('dialog')
+      let dateText = document.getElementById('date')
+
+      // Extract date buttons to 2d array.
+      let dates = [];
+      document.querySelectorAll('tr').forEach((tableRow, i) => {
+        dates.push([]);
+        tableRow.querySelectorAll('td').forEach((tableCell, j) => {
+          dates[i].push(tableCell);
+        });
+      });
+
+      for (let i = 0; i < dates.length; i++) {
+        for (let j = 0; j < dates[i].length; j++) {
+          let dateButton = dates[i][j].querySelector('.date');
+          if (dateButton) {
+            dateButton.addEventListener('click', openDialog);
+            dateButton.addEventListener('keydown', moveFocusFunction.bind(null, i, j)());
+          }
+        }
+      }
+
+      let recentButton;
+      function openDialog(e) {
+        recentButton = e.target;
+        dateText.textContent = recentButton.textContent;
+        dialog.showModal();
+      }
+
+      function closeDialog() {
+        dialog.close();
+        recentButton.focus();
+      }
+
+      function moveFocusFunction(i, j) {
+        return (e) => {
+          // TODO: e.keyCode 및 위에 정의한 dates 2차원 배열을 이용해 방향키로 focus를 이동하는
+          // 로직을 구현하세요. 이 주석 부분 외에 다른 부분은 고치실 필요가 없을 겁니다.
+        };
+      }
+    </script>
+  </body>
+</html>
