@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body  {
+    background-color: #4285f4;
+    font-family: 'Roboto';
+    color: white;
+    text-align: center;
+}
+
+.header {
+	margin: auto;
+    padding: 10px;
+    font-size: 40px;
+}
+
+button {
+  border: none;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 10px; 
+  margin: 10px; 
+text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#button {
+   margin: auto;
+    width: 50%;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 100px;
+    tabIndex: 0;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+#color {
+    padding: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">Develop with Google</div>
+
+<div>Welcome all to accessibility project</div>
+<div id="color">Choose your own background color</div>
+<button type="button" onclick="document.body.style.backgroundColor = 'rgb(246, 231, 95)'">YELLOW</button>
+<button type="button" onclick="document.body.style.backgroundColor = '#4285f4'">BLUE</button>
+<button type="button" onclick="document.body.style.backgroundColor = 'rgba(255, 0, 0, 0.8)'">RED</button>
+<button type="button" onclick="document.body.style.backgroundColor = 'green'">GREEN</button>
+<button type="button" onclick="document.body.style.backgroundColor = 'grey'">GREY</button>
+
+<script>
+function onClick(event) {
+  if (event.type == 'keydown' && event.key == 'Enter') {
+  var x = document.getElementById("button");
+  x.innerHTML = "YAY";
+  }
+}
+</script>
+
+<div role="button" id="button" onkeydown="onClick(event)">PRESS ME!</div>
+
+</body>
+</html>
+
