@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <style>
+      .date {
+        color: #2280d8;
+        padding: 6px;
+      }
+      .disabled {
+        color: grey;
+        padding: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <span>2월 달력 (날짜 클릭시 스케줄 등록 가능)</span>
+    <table border="5">
+      <tr>
+        <td><span class="disabled">28</span></td>
+        <td><span class="disabled">29</span></td>
+        <td><span class="disabled">30</span></td>
+        <td><span class="disabled">31</span></td>
+        <td><a class="date" href="#">1</a></td>
+        <td><a class="date" href="#">2</a></td>
+        <td><a class="date" href="#">3</a></td>
+      </tr>
+      <tr>
+        <td><a class="date" href="#">4</a></td>
+        <td><a class="date" href="#">5</a></td>
+        <td><a class="date" href="#">6</a></td>
+        <td><a class="date" href="#">7</a></td>
+        <td><a class="date" href="#">8</a></td>
+        <td><a class="date" href="#">9</a></td>
+        <td><a class="date" href="#">10</a></td>
+      </tr>
+      <tr>
+        <td><a class="date" href="#">11</a></td>
+        <td><a class="date" href="#">12</a></td>
+        <td><a class="date" href="#">13</a></td>
+        <td><a class="date" href="#">14</a></td>
+        <td><a class="date" href="#">15</a></td>
+        <td><a class="date" href="#">16</a></td>
+        <td><a class="date" href="#">17</a></td>
+      </tr>
+      <tr>
+        <td><a class="date" href="#">18</a></td>
+        <td><a class="date" href="#">19</a></td>
+        <td><a class="date" href="#">20</a></td>
+        <td><a class="date" href="#">21</a></td>
+        <td><a class="date" href="#">22</a></td>
+        <td><a class="date" href="#">23</a></td>
+        <td><a class="date" href="#">24</a></td>
+      </tr>
+      <tr>
+        <td><a class="date" href="#">25</a></td>
+        <td><a class="date" href="#">26</a></td>
+        <td><a class="date" href="#">27</a></td>
+        <td><a class="date" href="#">28</a></td>
+        <td><span class="disabled">1</span></td>
+        <td><span class="disabled">2</span></td>
+        <td><span class="disabled">3</span></td>
+      </tr>
+    </table>
+    <dialog id="dialog">
+      <div>2월 <span id="date">1</span>일 스케줄 등록</div>
+      <div>제목 : <input type="text" name="title"></div>
+      <button id="close" onclick="closeDialog()">닫기</button>
+    </dialog>
+
+    <script>
+      let dialog = document.getElementById('dialog')
+      let dateText = document.getElementById('date')
+
+      // Extract date buttons to 2d array.
+      let dates = [];
+      document.querySelectorAll('tr').forEach((tableRow, i) => {
+        dates.push([]);
+        tableRow.querySelectorAll('td').forEach((tableCell, j) => {
+          dates[i].push(tableCell);
+        });
+      });
+
+      for (let i = 0; i < dates.length; i++) {
+        for (let j = 0; j < dates[i].length; j++) {
+          let dateButton = dates[i][j].querySelector('.date');
+          if (dateButton) {
+            dateButton.addEventListener('click', openDialog);
+          }
+        }
+      }
+
+      let recentButton;
+      function openDialog(e) {
+        recentButton = e.target;
+        dateText.textContent = recentButton.textContent;
+        dialog.showModal();
+      }
+
+      function closeDialog() {
+        dialog.close();
+        recentButton.focus();
+      }
+    </script>
+  </body>
+</html>
