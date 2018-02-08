@@ -14,7 +14,7 @@
           , settings = $.extend(defaults, options)
           , containerIDhash = '#' + settings.containerID
           , containerHoverIDHash = '#' + settings.containerHoverID;
-        $('body').append('<a href="#" id="' + settings.containerID + '">' + settings.text + '</a>');
+        $('#MainBody').append('<a href="#" id="' + settings.containerID + '">' + settings.text + '</a>');
         $(containerIDhash).hide().on('click.UItoTop', function() {
             $('html, body').animate({
                 scrollTop: 0
