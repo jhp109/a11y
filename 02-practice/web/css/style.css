@@ -2908,7 +2908,7 @@ ul.faq {
 	width: 506px !important;
 }
 #PPMiniCart {
-	left: 41% !important;
+	left: 0% !important;
 }
 #PPMiniCart ul {
 	width: 464px !important;
@@ -2981,7 +2981,7 @@ td.invert-image a img {
 	width: 358px !important;
 }
 #PPMiniCart {
-	left: 51% !important;
+	left: 0% !important;
 }
 .top_brand_left-1 {
     width: 100%;
@@ -3126,20 +3126,20 @@ h3.w3_agile_header, h2.w3_agile_header {
 }
 @media (max-width: 384px){
 #PPMiniCart form {
-	width: 300px !important;
+	width: auto !important;
 	padding: 10px 10px 40px !important;
 }
 #PPMiniCart ul {
-	width: 278px !important;
+	width: 100% !important;
 }
 #PPMiniCart .minicart-remove {
-	width: 11px !important;
-	height: 11px !important;
+	width: 17px !important;
+	height: 17px !important;
 	line-height: 0;
 	margin: 3px 0 0 !important;
 }
 #PPMiniCart {
-	left: 64% !important;
+	left: 0% !important;
 }
 #PPMiniCart .minicart-item a {
 	font-size: 13px;
