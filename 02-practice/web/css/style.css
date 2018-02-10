@@ -43,6 +43,7 @@ span.glyphicon.glyphicon-shopping-cart.my-cart-icon.my-cart-icon-affix {
 .snipcart-thumb a {
     display: block;
     text-align: center;
+    background: darkgray;
 }
 .my-cart-icon-affix i {
     background: #fe9126 !important;
@@ -276,7 +277,8 @@ ul.multi-column-dropdown h6 {
 }
 .nav > li > a:hover, .nav > li > a:focus {
     background: none;
-	color:#fff !important;
+    /* color:#fff !important; */
+    color: #4d90fe;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     color: #fff;
@@ -371,6 +373,7 @@ ul.multi-column-dropdown h6 {
 }
 .agile_top_brand_left_grid1 p{
 	color:#212121;
+	background: #212121;
 	margin:1.5em 0 1em;
 	line-height:1.5em;
 	text-transform:capitalize;
@@ -381,6 +384,7 @@ ul.multi-column-dropdown h6 {
 	font-weight:600;
 	font-size:1em;
 	color:#212121;
+	background: #212121;
 	text-align: center;
 }
 .agile_top_brand_left_grid1 h4 span,.agileinfo_single_right_snipcart h4 span{
@@ -402,7 +406,7 @@ ul.multi-column-dropdown h6 {
 }
 .snipcart-details input.button {
     font-size: 14px;
-    color: #fff;
+    color: #3399cc;
     background: #3399cc;
     text-decoration: none;
     position: relative;
@@ -416,6 +420,7 @@ ul.multi-column-dropdown h6 {
 .agile_top_brand_left_grid:hover .snipcart-details input.button,.snipcart-details input.button:hover{
     background: #fe9126;
     background: #FBBC05;
+    color: #FBBC05;
 }
 .product_list_header input.button {
     color: #fff;
@@ -474,7 +479,8 @@ ul.multi-column-dropdown h6 {
 }
 #PPMiniCart .minicart-footer {
     position: relative;
-	width: 80%;
+    width: 80%;
+    opacity: 0;
 }
 /*-- //cart --*/
 .column div.agile_top_brand_left_grid {
@@ -526,6 +532,7 @@ div#myTabContent {
 }
 .nav-tabs > li {
     width: 50%;
+    opacity: 0;
 }
 .nav-tabs>li>a {
 	margin: 0 0px;
@@ -550,9 +557,12 @@ div#myTabContent {
     background: #fe9126;
     border:  0px solid transparent;
     background: #4d90fe;
+    /* color: #4d90fe; */
+    /* opacity: 0; */
 }
 .nav-tabs {
     border-bottom: 1px solid #fff;
+    /* opacity: 0; */
 }
 .grid_3.grid_5 {
     /* margin-top: 5em; */
@@ -2578,7 +2588,9 @@ ul.phone_email li {
     width: 33.33%;
 }
 .agile_top_brand_left_grid1 img {
-   max-width: 100% ! important ;
+   max-width: 100% ! important;
+   visibility: hidden;
+   /* background: gray; */
 }
 .brands-agile-1 {
     margin: 0;
@@ -2821,6 +2833,7 @@ ul.faq {
     width: 100%;
     text-align: center;
     font-size: 13px;
+    background: #333;
 }
 
 .w3ls_logo_products_left1 {}
@@ -3136,7 +3149,7 @@ h3.w3_agile_header, h2.w3_agile_header {
 	width: 17px !important;
 	height: 17px !important;
 	line-height: 0;
-	margin: 3px 0 0 !important;
+	/* margin: 3px 0 0 !important; */
 }
 #PPMiniCart {
 	left: 0% !important;
