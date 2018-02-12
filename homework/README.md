@@ -5,9 +5,3 @@ Problems :
 - https://jhp109.github.io/a11y/homework/2_TabOrderAdvanced
 - https://jhp109.github.io/a11y/homework/3_Dialog
 - https://jhp109.github.io/a11y/homework/4_Calendar
-
-Solutions :
-- https://jhp109.github.io/a11y/homework/solution/1_TabOrder
-- https://jhp109.github.io/a11y/homework/solution/2_TabOrderAdvanced
-- https://jhp109.github.io/a11y/homework/solution/3_Dialog
-- https://jhp109.github.io/a11y/homework/solution/4_Calendar
